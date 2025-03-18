@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pankaj -PNRT</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+
+
+    <!-- Importing Google Fonts: Montserrat for headings and Roboto for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+    <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="https://github.com/pnrt" class="logo" >Pankaj Rout(PNRT)</a>
+      <ul>
+        <li><a href="./work.html">Work</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="hero-banner.jpg" alt="Illustration" id="heroImage"/>
+  </section>
+
+  <footer>
+    <p>DEVELOPER</p>
+  </footer>
+
+  <script>
+    const shapes = [
+      "polygon(15% 0%, 85% 5%, 100% 40%, 85% 90%, 20% 95%, 0% 60%)",
+      "polygon(30% 0%, 100% 20%, 80% 100%, 0% 80%)",
+      "polygon(25% 10%, 90% 15%, 100% 50%, 80% 85%, 30% 100%, 5% 70%)",
+      "polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%)"
+    ];
+    
+    // Choose a random shape
+    const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+    // Apply the random clip-path shape to the hero image
+    document.getElementById("heroImage").style.clipPath = randomShape;
+    // When the image is clicked, replace it with text
+    document.getElementById("heroImage").addEventListener("click", function() {
+      const heroSection = document.querySelector(".hero");
+      heroSection.innerHTML = `
+      <div class="hero-content">
+      <a class="hero-text" href="https://forms.gle/B8QdJThWu6pxUBdw6">contact me </a>
+    //   <span class="material-symbols-outlined">favorite</span>
+      </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
