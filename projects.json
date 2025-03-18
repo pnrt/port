@@ -1,14 +1,14 @@
 [
     {
-        "title": "Project One",
-        "description": "This is a single project with details."
+        "title": "White Sand",
+        "description": "Order Management App that streamlines order processing, tracking, and inventory management. It features secure authentication, real-time updates, and seamless database integration for efficiency. The app ensures smooth order handling with automation, role-based access, and intuitive UI/UX for better user experience."
     },
     {
-        "title": "Project One",
-        "description": "This is a single project with details."
+        "title": "Tenant Management",
+        "description": "Tenant Management App to simplify rent tracking, tenant records, and utility billing. It features automated calculations, payment history, and real-time updates for efficient management. The app ensures seamless communication, secure data storage, and an intuitive UI for landlords and tenants."
     },
     {
-        "title": "Project One",
-        "description": "This is a single project with details."
+        "title": "DocuSphere",
+        "description": "Delivery Challan Management App to record and track challan documents efficiently. It features real-time status updates, secure data storage, and automated record-keeping. The app streamlines delivery processes, ensuring accurate tracking, quick status changes, and an intuitive interface for seamless management."
     }
 ]
