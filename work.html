@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,12 +66,15 @@
                 <div class="project-card">
                     <img src="project1.png" alt="Project 1">
                     <div class="card-content">
-                        <span class="tag-label">App </span>
+                        <div class="api-link">
+                            <span class="tag-label">App</span>
+                            <span><a href="https://github.com/pnrt/WhiteSand" class="btn"><i class="fa-brands fa-github"></i></a></span>
+                        </div>
                         <h3 class="card-title">White Sand</h3>
                         <p class="card-text">
                             Order Management App that streamlines order processing, tracking, and inventory management. It features secure authentication, real-time updates, and seamless database integration for efficiency. The app ensures smooth order handling with automation, role-based access, and intuitive UI/UX for better user experience.
                         </p>
-                        <a href="https://github.com/pnrt/WhiteSand" class="btn">View Project</a>
+                        <!-- <a href="https://github.com/pnrt/WhiteSand" class="btn"><i class="fa-brands fa-github"></i></a> -->
                     </div>
                 </div>
     
@@ -77,10 +82,13 @@
                 <div class="project-card">
                     <img src="project2.png" alt="Project 2">
                     <div class="card-content">
-                        <span class="tag-label">App</span>
+                        <div class="api-link">
+                            <span class="tag-label">App</span>
+                            <span><a href="https://github.com/pnrt/home" class="btn"><i class="fa-brands fa-github"></i></a></span>
+                        </div>
                         <h3 class="card-title">Tenant Management</h3>
                         <p class="card-text">Tenant Management App to simplify rent tracking, tenant records, and utility billing. It features automated calculations, payment history, and real-time updates for efficient management. The app ensures seamless communication, secure data storage, and an intuitive UI for landlords and tenants.</p>
-                        <a href="https://github.com/pnrt/home" class="btn">View Project</a>
+                        <!-- <a href="https://github.com/pnrt/home" class="btn"><i class="fa-brands fa-github"></i></a> -->
                     </div>
                 </div>
     
@@ -88,26 +96,29 @@
                 <div class="project-card">
                     <img src="project3.png" alt="Project 3">
                     <div class="card-content">
-                        <span class="tag-label">App</span>
+                        <div class="api-link">
+                            <span class="tag-label">App</span>
+                            <span><a href="https://github.com/pnrt/DocuSphere" class="btn"><i class="fa-brands fa-github"></i></a></span>
+                        </div>
                         <h3 class="card-title">DocuSphere</h3>
                         <p class="card-text">Delivery Challan Management App to record and track challan documents efficiently. It features real-time status updates, secure data storage, and automated record-keeping. The app streamlines delivery processes, ensuring accurate tracking, quick status changes, and an intuitive interface for seamless management.</p>
-                        <a href="https://github.com/pnrt/DocuSphere" class="btn">View Project</a>
+                        <!-- <a href="https://github.com/pnrt/DocuSphere" class="btn"><i class="fa-brands fa-github"></i></a> -->
                     </div>
                 </div>
                 <!-- Project 4 -->
                 <div class="project-card">
                     <img src="project4.png" alt="Project 3">
                     <div class="card-content">
-                        <span class="tag-label">Free API</span>
+                        <div class="api-link">
+                            <span class="tag-label">Free API</span>
+                            <a href="https://pnrt.github.io/port/projects.json" class="btn"><i class="fa fa-asterisk"></i></a>
+                            <a href="https://pnrt.github.io/port/open.json" class="btn"><i class="fa fa-asterisk"></i></a>
+                        </div>
                         <h3 class="card-title">JSON PROJECTS API</h3>
                         <p class="card-text">
                             You can use my projects API for free to fetch data easily. Access it here:<b><i> https://pnrt.github.io/port/projects.json</i></b> && <b><i> https://pnrt.github.io/port/open.json</i></b>. No authentication required!
                             <div id="data-container">Loading...</div>
                         </p>
-                        <div>
-                            <a href="https://pnrt.github.io/port/projects.json" class="btn">Projects API link</a>
-                            <a href="https://pnrt.github.io/port/open.json" class="btn">Open API link</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -160,11 +171,10 @@
                     <div class="open-project-card">
                         <div class="open-card-content">
                             <h3 class="open-project-title">${project.title}</h3>
-                            ${project.docker_link && `<span class="tag-label"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="M480.5-96q-52.5 0-112-18t-109-51Q210-198 177-246t-33-108v-126l144 120-61 62q38 53 94 86.5T444-170v-334H336v-72h108v-53q-36-11-60-42.72T360-744q0-50 35-85t85-35q50 0 85 35t35 85q0 41-24 72.5T516-629v53h108v72H516v334q67-8 123-42t94-87l-61-61 144-120v126q0 60-33 108t-82.5 81.5Q651-131 592-113.5T480.5-96Zm-.5-600q20.4 0 34.2-13.8Q528-723.6 528-744q0-20.4-13.8-34.2Q500.4-792 480-792q-20.4 0-34.2 13.8Q432-764.4 432-744q0 20.4 13.8 34.2Q459.6-696 480-696Z"/></svg> Docker</span>`}
-                            <span class="tag-label">Free API</span>
+                            ${project.docker_link && `<span class="docker-tag" ><a href="${project.docker_link}"><i class="fa-brands fa-docker"></i></a></span>`}
+                            <span class="alpha-tag"><a href="${project.link}" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a></span>
                             <p class="open-project-description">${project.description}</p>
                         </div>
-                        <a href="${project.link}" class="btn" target="_blank">View on GitHub</a>
                     </div>
                 `).join("");
             })
