@@ -291,23 +291,6 @@ footer {
     text-align: left;
 }
 
-/* Button */
-.open-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: background 0.3s ease;
-    margin-top: auto;
-}
-
-.open-btn:hover {
-    background: #0056b3;
-}
-
 /* Docker Tag Label */
 .docker-tag {
     display: inline-block;
