@@ -69,6 +69,10 @@ nav a {
   justify-content: center;
   height: 100%;
 }
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent */
+}
 footer {
     text-align: center;
     padding: 20px;
