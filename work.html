@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -99,10 +101,13 @@
                         <span class="tag-label">Free API</span>
                         <h3 class="card-title">JSON PROJECTS API</h3>
                         <p class="card-text">
-                            You can use my projects API for free to fetch data easily. Access it here:<b><i> https://pnrt.github.io/port/projects.json</i></b> . No authentication required!
+                            You can use my projects API for free to fetch data easily. Access it here:<b><i> https://pnrt.github.io/port/projects.json</i></b> && <b><i> https://pnrt.github.io/port/open.json</i></b>. No authentication required!
                             <div id="data-container">Loading...</div>
                         </p>
-                        <a href="https://pnrt.github.io/port/projects.json" class="btn">API link</a>
+                        <div>
+                            <a href="https://pnrt.github.io/port/projects.json" class="btn">Projects API link</a>
+                            <a href="https://pnrt.github.io/port/open.json" class="btn">Open API link</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,9 +116,9 @@
     
     <section class="open-source-projects">
         <div class="open-container">
-            <h2 class="open-section-title">Open Source Projects</h2>
+            <h2 class="open-section-title"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#DF9D9B"><path d="m160-419 101-101-101-101L59-520l101 101Zm540-21 100-160 100 160H700Zm-220-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-160q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640Zm0 40ZM0-240v-63q0-44 44.5-70.5T160-400q13 0 25 .5t23 2.5q-14 20-21 43t-7 49v65H0Zm240 0v-65q0-65 66.5-105T480-450q108 0 174 40t66 105v65H240Zm560-160q72 0 116 26.5t44 70.5v63H780v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5Zm-320 30q-57 0-102 15t-53 35h311q-9-20-53.5-35T480-370Zm0 50Z"/></svg> Open Source Projects</h2>
             <p class="open-section-subtitle">Explore my contributions to the open-source community.</p>
-    
+            <!-- open projects -->
             <div id="open-project-grid" class="open-project-grid">
                 
             </div>
@@ -127,7 +132,8 @@
 
     <script>
         function fetchData() {
-            fetch('https://pnrt.github.io/port/projects.json') 
+            fetch('https://pnrt.github.io/port/projects.json')
+                .then(response => response.json())
                 .then(data => {
                     if (data.length > 0) {
                         const firstItem = data[0];
@@ -144,16 +150,18 @@
                 });
         }
         function openFetchAndRenderProjects() {
-        const apiURL = "./open.json"; 
+        const apiURL = "https://pnrt.github.io/port/open.json"; 
 
         fetch(apiURL)
             .then(response => response.json())
             .then(data => {
-                const projectGrid = document.getElementById("project-grid");
+                const projectGrid = document.getElementById("open-project-grid");
                 projectGrid.innerHTML = data.map(project => `
                     <div class="open-project-card">
                         <div class="open-card-content">
                             <h3 class="open-project-title">${project.title}</h3>
+                            ${project.docker_link && `<span class="tag-label"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="M480.5-96q-52.5 0-112-18t-109-51Q210-198 177-246t-33-108v-126l144 120-61 62q38 53 94 86.5T444-170v-334H336v-72h108v-53q-36-11-60-42.72T360-744q0-50 35-85t85-35q50 0 85 35t35 85q0 41-24 72.5T516-629v53h108v72H516v334q67-8 123-42t94-87l-61-61 144-120v126q0 60-33 108t-82.5 81.5Q651-131 592-113.5T480.5-96Zm-.5-600q20.4 0 34.2-13.8Q528-723.6 528-744q0-20.4-13.8-34.2Q500.4-792 480-792q-20.4 0-34.2 13.8Q432-764.4 432-744q0 20.4 13.8 34.2Q459.6-696 480-696Z"/></svg> Docker</span>`}
+                            <span class="tag-label">Free API</span>
                             <p class="open-project-description">${project.description}</p>
                         </div>
                         <a href="${project.link}" class="btn" target="_blank">View on GitHub</a>
@@ -163,8 +171,8 @@
             .catch(error => console.error("Error fetching projects:", error));
         }
 
-        window.onload = fetchData;
-        window.onload = openFetchAndRenderProjects;
+        window.addEventListener("load", fetchData);
+        window.addEventListener("load", openFetchAndRenderProjects);
     </script>
 </body>
 </html>

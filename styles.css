@@ -197,7 +197,7 @@ footer {
 }
 
 #data-container {
-    margin-top: 40px;
+    margin-top: 0;
     background: #f0f8ff;
     padding: 0;
     border-radius: 5px;
@@ -218,16 +218,20 @@ footer {
 
 /* Section Title */
 .open-section-title {
+    font-family: "Bonheur Royale", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5rem;
-    font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
 /* Section Subtitle */
 .open-section-subtitle {
-    font-size: 1.2rem;
-    color: #555;
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    font-size: 1rem;
+    color: #b0afaf;
+
     margin-bottom: 40px;
 }
 
@@ -259,15 +263,22 @@ footer {
 
 /* Project Title */
 .open-project-title {
-    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 1.5rem; */
     color: #007bff;
     margin-bottom: 10px;
 }
 
 /* Project Description */
 .open-project-description {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
     color: #666;
     flex-grow: 1;
+    text-align: left;
 }
 
 /* Button */
