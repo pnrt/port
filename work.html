@@ -109,6 +109,16 @@
         </div>
     </section>
     
+    <section class="open-source-projects">
+        <div class="open-container">
+            <h2 class="open-section-title">Open Source Projects</h2>
+            <p class="open-section-subtitle">Explore my contributions to the open-source community.</p>
+    
+            <div id="open-project-grid" class="open-project-grid">
+                
+            </div>
+        </div>
+    </section>
 
     <footer class="work-footer">
         <p>&copy; 2025 Pankaj Kumar Rout (pnrt). All rights reserved.</p>
@@ -117,11 +127,10 @@
 
     <script>
         function fetchData() {
-            fetch('https://pnrt.github.io/port/projects.json')  // Replace with your JSON file or API URL
-                .then(response => response.json()) // Convert response to JSON
+            fetch('https://pnrt.github.io/port/projects.json') 
                 .then(data => {
-                    if (data.length > 0) { // Check if the array is not empty
-                        const firstItem = data[0]; // Get the first object
+                    if (data.length > 0) {
+                        const firstItem = data[0];
                         document.getElementById('data-container').innerHTML = `
                             <p>Working Project (Api): ${firstItem.title}</p>
                         `;
@@ -134,7 +143,28 @@
                     document.getElementById('data-container').innerHTML = "Failed to load data.";
                 });
         }
+        function openFetchAndRenderProjects() {
+        const apiURL = "./open.json"; 
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+                const projectGrid = document.getElementById("project-grid");
+                projectGrid.innerHTML = data.map(project => `
+                    <div class="open-project-card">
+                        <div class="open-card-content">
+                            <h3 class="open-project-title">${project.title}</h3>
+                            <p class="open-project-description">${project.description}</p>
+                        </div>
+                        <a href="${project.link}" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                `).join("");
+            })
+            .catch(error => console.error("Error fetching projects:", error));
+        }
+
         window.onload = fetchData;
+        window.onload = openFetchAndRenderProjects;
     </script>
 </body>
 </html>

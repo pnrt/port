@@ -202,3 +202,87 @@ footer {
     padding: 0;
     border-radius: 5px;
 }
+
+/* -----------Open Section Styling------------ */
+.open-source-projects {
+    padding: 80px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Container */
+.open-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.open-section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Section Subtitle */
+.open-section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Project Grid */
+.open-project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Project Card */
+.open-project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.open-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Title */
+.open-project-title {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Project Description */
+.open-project-description {
+    color: #666;
+    flex-grow: 1;
+}
+
+/* Button */
+.open-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    margin-top: auto;
+}
+
+.open-btn:hover {
+    background: #0056b3;
+}
