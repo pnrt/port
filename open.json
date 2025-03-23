@@ -1,20 +1,20 @@
 [
     {
-        "title": "Project One",
-        "description": "An innovative tool for developers, enhancing productivity and efficiency.",
-        "docker_link": "",
-        "link": "https://example.com"
+        "title": "🚀 Free PDF Unlocker – Web-Based & Open-Source",
+        "description": "A simple yet powerful web-based PDF Unlocker that lets users upload password-protected PDFs, enter the password, preview the unlocked file, and download it. Built with Flask (backend) and Nginx (frontend), fully containerized using Docker & Docker Compose for easy deployment.",
+        "docker_link": "https://hub.docker.com/r/pnrt/pdf-unlocker-frontend",
+        "link": "https://github.com/pnrt/PDF-unlocker"
     },
     {
-        "title": "Project Two",
-        "description": "An innovative tool for developers, enhancing productivity and efficiency.",
-        "docker_link": "https://example.com",
-        "link": "https://example.com"
+        "title": "🗜️ PDF Compression with Ghostscript & Python – CLI & GUI",
+        "description": "A powerful yet lightweight tool for compressing PDFs using Ghostscript and Python. Supports both command-line usage and a user-friendly Tkinter-based GUI. Choose from multiple compression levels (screen, ebook, printer, prepress) to balance file size and quality. Works across Windows, macOS, and Linux. Perfect for both developers and non-technical users who need efficient PDF compression without quality loss.",
+        "docker_link": "",
+        "link": "https://github.com/pnrt/PDF-Compression"
     },
     {
-        "title": "Project Three",
-        "description": "An innovative tool for developers, enhancing productivity and efficiency.",
-        "docker_link": "",
-        "link": "https://example.com"
+        "title": "🚀 Spring Boot Kotlin Microservices – CRUD, PostgreSQL, CSV & Text File Handling",
+        "description": "A comprehensive guide to building microservices with Spring Boot and Kotlin, covering CRUD operations with PostgreSQL, CSV file processing, and text file management. This project demonstrates a clean microservice architecture with controllers, services, repositories, and database integration. It also includes API testing using cURL and guides on running the application efficiently. Perfect for developers looking to master microservices in Kotlin with Spring Boot!",
+        "docker_link": "https://hub.docker.com/r/pnrt/tasks-spring-boot-app",
+        "link": "https://github.com/pnrt/Spring-Boot-Tasks"
     }
 ]
